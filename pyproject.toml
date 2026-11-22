@@ -1,6 +1,6 @@
 [project]
 name = "mac-roman-py"
-version = "0.1.0"
+version = "0.1.1"
 description = "Convert bytes to and from the Mac Roman character set."
 requires-python = ">=3.10"
 dependencies = []
