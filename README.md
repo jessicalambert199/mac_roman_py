@@ -36,3 +36,10 @@ the original 1984 table. Apple added it in Mac OS 8.5. This library follows the
 later mapping, which is what modern tools expect. The old pre-euro byte 0xDB
 mapped to the generic currency sign (U+00A4); that code point is not encodable
 here.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
